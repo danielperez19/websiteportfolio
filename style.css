@@ -1,0 +1,61 @@
+/* Reset the margin and padding for consistency across browsers */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the default font family for the entire document */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header section */
+header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out children elements */
+    align-items: center; /* Vertically center children elements */
+    padding: 20px; /* Add padding inside the header */
+    background-color: #f8f8f8; /* Set background color for the header */
+}
+
+/* Add some left margin to the header title */
+header h1 {
+    margin-left: 20px;
+}
+
+/* Style the navigation list */
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for horizontal layout */
+    margin-right: 20px; /* Add right margin for spacing from the edge */
+}
+
+/* Add left margin to each list item for spacing between links */
+nav ul li {
+    margin-left: 20px;
+}
+
+/* Style the navigation links */
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set the text color */
+}
+
+/* Change the link color when hovering */
+nav ul li a:hover {
+    color: #007BFF; /* Set hover color for links */
+}
+
+/* Add padding inside each section */
+section {
+    padding: 20px;
+}
+
+/* Style for the profile picture */
+.profile-pic {
+    display: block; /* Make it a block element */
+    margin-left: auto; /* Push it to the right */
+    margin-right: 0; /* No right margin */
+    width: 200px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+}
