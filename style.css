@@ -1,12 +1,22 @@
+/* Root CSS variables for easy color management */
+:root {
+    --primary-font-color: #0b4ee8; /* Default font color */
+    --header-font-color: #ffffff; /* Header font color */
+    --section-header-color: #333; /* Section headers */
+    --paragraph-font-color: #555; /* Paragraph text color */
+}
+
 /* Reset the margin and padding for consistency across browsers */
 body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
 }
 
-/* Set the default font family for the entire document */
+/* Set the default font family and background for the entire document */
 body {
+    background-color: #373434;
     font-family: Arial, sans-serif;
+    color: var(--primary-font-color);
 }
 
 /* Style the header section */
@@ -15,7 +25,8 @@ header {
     justify-content: space-between; /* Space out children elements */
     align-items: center; /* Vertically center children elements */
     padding: 20px; /* Add padding inside the header */
-    background-color: #7d7777; /* Set background color for the header */
+    background-color: #000000; /* Set background color for the header */
+    color: var(--header-font-color);
 }
 
 /* Add some left margin to the header title */
@@ -38,17 +49,23 @@ nav ul li {
 /* Style the navigation links */
 nav ul li a {
     text-decoration: none; /* Remove underline from links */
-    color: #333; /* Set the text color */
+    color: var(--primary-font-color); /* Use the primary font color */
 }
 
 /* Change the link color when hovering */
 nav ul li a:hover {
-    color: #007BFF; /* Set hover color for links */
+    color: #007bff; /* Set hover color for links */
 }
 
 /* Add padding inside each section */
 section {
     padding: 20px;
+    color: var(--paragraph-font-color); /* Use the paragraph font color */
+}
+
+/* Style for section headers */
+section h2, section h3 {
+    color: var(--section-header-color); /* Use the section header color */
 }
 
 /* Style for the about section container */
@@ -77,7 +94,6 @@ section {
 
 .skills-container h3 {
     margin-bottom: 10px;
-    color: #333;
 }
 
 .skills-container ul {
@@ -87,5 +103,22 @@ section {
 
 .skills-container ul li {
     margin-bottom: 5px;
-    color: #555;
+}
+
+/* Style for the skills carousel */
+.skills-carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    will-change: transform;
+}
+
+.skill-logo {
+    width: 128px; /* Ensures all logos are 128x128 pixels */
+    height: 128px;
+    padding: 0 10px;
 }
